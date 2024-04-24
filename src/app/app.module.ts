@@ -1,16 +1,76 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
+import { RegistroScreenComponent } from './screens/registro-screen/registro-screen.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgChartsModule } from 'ng2-charts';
+import { NavbarComponent } from './partials/navbar/navbar.component';
+//Este import es para los servicios HTTP
+import { HttpClientModule } from '@angular/common/http';
+
+import { RegistroAdminComponent } from './partials/registro-admin/registro-admin.component';
+import { RegistroAlumnoComponent } from './partials/registro-alumno/registro-alumno.component';
+import { RegistroMaestroComponent } from './partials/registro-maestro/registro-maestro.component';
+//AngularMaterial
+import {MatRadioModule} from '@angular/material/radio';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button'; import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+import { AdminScreenComponent } from './screens/admin-screen/admin-screen.component';
+import { AlumnosScreenComponent } from './screens/alumnos-screen/alumnos-screen.component';
+import { MaestrosScreenComponent } from './screens/maestros-screen/maestros-screen.component';
+import { EliminarUserModalComponent } from './modals/eliminar-user-modal/eliminar-user-modal.component';
+import { GraficasScreenComponent } from './screens/graficas-screen/graficas-screen.component';
+import { RegistroMateriaComponent } from './partials/registro-materia/registro-materia.component';
+import { MateriasScreenComponent } from './screens/materias-screen/materias-screen.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginScreenComponent,
+    RegistroScreenComponent,
+    NavbarComponent,
+    RegistroAdminComponent,
+    RegistroAlumnoComponent,
+    RegistroMaestroComponent,
+    HomeScreenComponent,
+    AdminScreenComponent,
+    AlumnosScreenComponent,
+    MaestrosScreenComponent,
+    EliminarUserModalComponent,
+    GraficasScreenComponent,
+    RegistroMateriaComponent,
+    MateriasScreenComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NgChartsModule,
+    FormsModule,
+    MatRadioModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="header-home-admin">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="body-admin">
+    <div class="row mt-5 mb-5">
+      <div class="col-12">
+        <span class="title-perfil">Bienvenido {{name_user}}</span>
+        <br><br>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-3 mb-5" style="text-align: center;">
+        <div class="col-12">
+          <div class="alert alert-primary" role="alert">
+            <span class="title-table">Lista de materias registrados</span>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">NRC</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Seccion</th>
+            <th scope="col">Días</th>
+            <th scope="col">Horario de Inicio</th>
+            <th scope="col">Horario de Fin</th>
+            <th scope="col">Salon</th>
+            <th scope="col">Programa</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let materia of lista_materias; let i=index">
+            <td>{{materia.nrc}}</td>
+            <td>{{materia.nombre}}</td>
+            <td>{{materia.seccion}} </td>
+            <td>{{materia.materias_dias}}</td>
+            <td>{{materia.horario_inicio}}</td>
+            <td>{{materia.horario_final}}</td>
+            <td>{{materia.salon}}</td>
+            <td>{{materia.programa}}</td>
+            <td class="td-editar"><i class="bi bi-pencil-square" (click)="goEditar(materia.id)"></i></td>
+            <td class="td-eliminar"><i class="bi bi-trash3-fill" (click)="delete(materia.id)"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
